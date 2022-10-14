@@ -47,25 +47,25 @@ public class MemberController {
         Comment comment = new Comment(requestDto);
         return commentRepository.save(comment);
     }
-//
+    //
     @PutMapping("/post/{id}")   //게시글 수정
     public Long updatePost(@PathVariable Long id, @RequestBody PostRequestDto requestDto) {
         postService.update(id, requestDto);
         return id;
     }
-//
+    //
     @PutMapping("/comment/{id}")    //댓글 수정
     public Long updateComment(@PathVariable Long id, @RequestBody CommentRequestDto requestDto) {
         commentService.update(id, requestDto);
         return id;
     }
-//
+    //
     @DeleteMapping("/post/{id}")    //게시글 삭제
     public Long deletePost(@PathVariable Long id) {
         postRepository.deleteById(id);
         return id;
     }
-//
+    //
     @DeleteMapping("/comment/{id}") //댓글 삭제
     public Long deleteComment(@PathVariable Long id) {
         commentRepository.deleteById(id);

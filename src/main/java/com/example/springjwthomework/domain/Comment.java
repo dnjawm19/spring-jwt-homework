@@ -23,8 +23,8 @@ public class Comment extends Timestamped {
     @Column(nullable = false)
     private String contents;
 
-    public Comment(CommentRequestDto requestDto) {
-        this.postId = requestDto.getPostId();
+    public Comment(CommentRequestDto requestDto, Post post) {
+        this.post = post;
         this.contents = requestDto.getContents();
     }
 

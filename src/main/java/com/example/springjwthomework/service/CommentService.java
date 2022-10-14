@@ -1,8 +1,10 @@
 package com.example.springjwthomework.service;
 
 import com.example.springjwthomework.domain.Comment;
+import com.example.springjwthomework.domain.Post;
 import com.example.springjwthomework.dto.CommentRequestDto;
 import com.example.springjwthomework.repository.CommentRepository;
+import com.example.springjwthomework.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
